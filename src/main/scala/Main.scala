@@ -9,8 +9,8 @@ object Main extends App{
 
   println("a + b = " + (a + b))
 
-  var c = a.move(10, 20)
-  println("Move point a by (10, 20) : " + c)
+  a.move(10, 20)
+  println("Move point a by (10, 20) : " + a)
 
   println("Distance between a and b = " + a.distance(b))
 

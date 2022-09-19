@@ -1,11 +1,13 @@
 package point
-case class Point(xCoordinate: Int, yCoordinate: Int){
-  private var x = xCoordinate
-  private var y = yCoordinate
+
+case class Point(var x: Int, var y: Int){
 
   def +(that: Point) : Point = Point(x + that.x, y + that.y)
 
-  def move(dx: Int, dy: Int) : Point = Point(x + dx, y + dy)
+  def move(dx: Int, dy: Int) : Unit = {
+    x = x + dx
+    y = y + dy
+  }
 
   def distance(that: Point): Double = scala.math.sqrt(scala.math.pow(that.y - y, 2) + scala.math.pow(that.x - x, 2))
 
